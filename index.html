@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂死之光圖鑑</title>
+    <style>
+        html {
+            scroll-behavior: smooth; 
+        }
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0; 
+        }
+        h1{
+            color: red;
+        }
+        a.bottom-link {
+            font-size: 40px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .container {
+            width: 960px;      
+            margin: 0 auto;  
+            background-color: white;
+            padding: 30px;
+            box-sizing: border-box;
+            text-align: center;  
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+        }
+        img {
+            margin-top: 10px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #333; 
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            position: fixed; 
+            top: 20px;
+            left: 20px;
+            z-index: 2; 
+            transition: 0.3s;
+        }
+
+        .openbtn:hover {
+            background-color: #555;
+        }
+
+        .sidebar {
+            height: 100%; 
+            width: 0; 
+            position: fixed; 
+            z-index: 3; 
+            top: 0;
+            left: 0;
+            background-color: #111; 
+            overflow-x: hidden; 
+            transition: width 0.5s; 
+            padding-top: 60px; 
+        }
+
+        .sidebar a {
+            padding: 15px 8px 15px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181; 
+            display: block; 
+            transition: background-color 0.8s ease, color 0.3s ease; 
+            text-align: left;
+        }
+
+        .sidebar a:not(.closebtn):hover {
+            background-color: #FFA500;
+            color: white;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#low-danger">🟢 低危險度</a>
+    <a href="#normal-danger">🟡 中危險度</a>
+    <a href="#strong-danger">🔴 高危險度</a>
+    <a href="#more-info">🔗 更多詳細資料</a>
+</div>
+
+<button class="openbtn" onclick="openNav()">☰ 殭屍圖鑑</button>
+
+<div class="container">
+    <h1>垂死之光常見殭屍特色和危險性</h1>
+    
+    <div class="lowPower" id="low-danger">
+        <h2>普通殭屍</h2>
+        特色：行動緩慢，會揮手攻擊玩家，靠近則會變成抱著撕咬
+        <p>危險度：低</p>
+        <img src="image/image.png" alt="" width="500px" height="700px">
+        
+        <h2>疫魔</h2>
+        特色：比普通殭屍更敏捷，會跑酷，掃描後會發光
+        <p>危險度：低</p>
+        <img src="image/image1.png" alt="" width="500px" height="700px">
+        
+        <h2>蟾蜍</h2>
+        特色：會遠程攻擊吐毒液的特殊殭屍，近身後很脆落
+        <p>危險度：低</p>
+        <img src="image/image2.png" alt="" width="500px" height="700px">
+        
+        <h2>脫韁者</h2>
+        特色：唯一不會攻擊玩家的殭屍，但是只會在夜晚出沒，被他發現或殺死他會被夜魔追蹤
+        <p>危險度：低</p>
+        <img src="image/image3.png" alt="" width="500px" height="700px">
+        
+        <h2>尖嘯者</h2>
+        特色：遊戲中皆為幼童感染而成，靠近後會用音波攻擊玩家，並且會吸引附近的殭屍靠過來
+        <p>危險度：低</p>
+        <img src="image/image4.png" alt="" width="500px" height="700px">
+    </div>
+
+    <div class="normalPower" id="normal-danger">
+        <h2>自爆者</h2>
+        特色：會往玩家的所在地跑過來，足夠進之後會爆炸，炸飛範圍內的所有東西
+        <p>危險度：中</p>
+        <img src="image/image5.png" alt="" width="500px" height="700px">
+        
+        <h2>大槌子</h2>
+        特色：雙手拿著鋼筋棒攻擊的大型殭屍，可以把玩家打飛並造成大量傷害，但移動速度緩慢
+        <p>危險度：中</p>
+        <img src="image/image6.png" alt="" width="500px" height="700px">
+    </div>
+
+    <div class="strongPower" id="strong-danger">
+        <h2>坦克</h2>
+        特色：掃描後會發光的巨型殭屍，身穿盔甲血量非常厚，進戰可以把玩家打飛，遠程會拋大型石塊攻擊
+        <p>危險度：高</p>
+        <img src="image/image7.png" alt="" width="500px" height="700px">
+        
+        <h2>夜魔</h2>
+        特色：掃描後會發光，只有在黑暗區域和夜晚會出現的頂級掠食者，行動敏捷會跑酷，進戰強力並會撲倒玩家，撲倒後沒來的及掙脫會直接秒殺玩家，遠程會吐毒液
+        <p>危險度：高</p>
+        <img src="image/image8.png" alt="" width="500px" height="700px">
+    </div>
+    
+    <!-- --- 修改重點 4：給底部連結加上 id 供側邊欄定位 --- -->
+    <a id="more-info" class="bottom-link" href="https://dyinglight.fandom.com/wiki/Infected">更多詳細資料</a>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+    }
+</script>
+
+</body>
+</html>
